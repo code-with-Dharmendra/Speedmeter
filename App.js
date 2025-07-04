@@ -1,13 +1,14 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import AppNavigation from './src/navigation/AppNavigation';
+import { View, Text } from 'react-native'
+import React from 'react'
+import HomeScreen from './src/screens/HomeScreen'
+import { ThemeProvider } from './src/hooks/ThemeContext'
 
-
-export default function App() {
+const App = () => {
   return (
-      <NavigationContainer>
-        <AppNavigation/>
-      </NavigationContainer>
-   
-  );
+    <ThemeProvider>
+      <HomeScreen></HomeScreen>
+    </ThemeProvider>    
+  )
 }
+
+export default App
